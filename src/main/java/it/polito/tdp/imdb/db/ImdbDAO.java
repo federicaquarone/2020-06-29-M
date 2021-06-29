@@ -157,7 +157,7 @@ public class ImdbDAO {
 				+ "GROUP BY md1.director_id, md2.director_id";
 		List<Arco> result= new ArrayList<Arco>();
 		Connection conn = DBConnect.getConnection();
-
+//ciaooooooo
 		try {
 			PreparedStatement st = conn.prepareStatement(sql);
 			st.setInt(1, anno);
