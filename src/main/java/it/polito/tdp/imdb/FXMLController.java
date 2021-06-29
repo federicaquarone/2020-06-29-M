@@ -56,7 +56,10 @@ public class FXMLController {
     	txtResult.appendText("#VERTICI: "+ model.getNVertici()+"\n");
     	txtResult.appendText("#ARCHI: "+ model.getNArchi()+"\n");
 
+    	
     	boxRegista.getItems().addAll(model.getDirettori());
+    	boxRegista.setDisable(false);
+    	btnAdiacenti.setDisable(false);
     	
     }
 
@@ -71,6 +74,7 @@ public class FXMLController {
     @FXML
     void doRicorsione(ActionEvent event) {
 
+    	btnCercaAffini.setDisable(false);
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
@@ -89,6 +93,9 @@ public class FXMLController {
     	
     	this.model = model;
     	this.boxAnno.getItems().addAll(model.getAnni());
+    	this.btnAdiacenti.setDisable(true);
+    	this.btnCercaAffini.setDisable(true);
+    	this.boxRegista.setDisable(true);
     	
     }
     
